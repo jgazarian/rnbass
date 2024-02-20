@@ -1,0 +1,75 @@
+@import "../styles/mixins.module";
+$black: #2b2b2b;
+$white: #efefef;
+
+.realHero {
+  height: 36vh;
+  @include tablet {
+    height: 60vh;
+  }
+  $url: "https://images.unsplash.com/photo-1636226570637-3fbda7ca09dc?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  position: relative;
+  //background: url($url) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background-color: rgba($black, 0.5);
+    -webkit-backdrop-filter: blur(0.75rem);
+    backdrop-filter: blur(0.75rem);
+    h1,
+    h4 {
+      color: $white;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-weight: 900;
+      background: linear-gradient(-45deg, darken(firebrick, 10%), firebrick);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #2b2b2b;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      @include tablet {
+        font-size: 4rem;
+      }
+    }
+
+    h4 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      background: radial-gradient(ellipse at 8rad, #e66465, transparent),
+        radial-gradient(ellipse at 4rad, #4d9f0c, transparent),
+        radial-gradient(ellipse at 2rad, #e66465, transparent);
+      background: linear-gradient(-270deg, deepskyblue, forestgreen);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      @include tablet {
+        font-size: 1rem;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.logo{
+    width: calc(100% - 2rem);
+    height: auto;
+    @include tablet{
+    width: 34rem;
+    }
+}

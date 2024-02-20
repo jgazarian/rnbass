@@ -1,0 +1,36 @@
+@mixin darkMode() {
+  @media (prefers-color-scheme: dark) {
+    background: #2b2b2b;
+    color: #f1f1f1;
+    border-color: #000;
+    button {
+      background: #000;
+    }
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1201px) {
+    @content;
+  }
+}
+
+@mixin largeDesktop {
+  @media (min-width: 1441px) {
+    @content;
+  }
+}
+
+@mixin hoverable {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

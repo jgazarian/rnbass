@@ -1,0 +1,38 @@
+{
+  "name": "rnbass",
+  "version": "1.0.0",
+  "private": true,
+  "description": "rnbass",
+  "author": "Ryan",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "dev": "npm run clean && npm run develop"
+  },
+  "dependencies": {
+    "gatsby": "^5.13.2",
+    "gatsby-plugin-google-gtag": "^5.13.1",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-nprogress": "^5.13.1",
+    "gatsby-plugin-react-svg": "^3.3.0",
+    "gatsby-plugin-sass": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.71.0",
+    "stripe": "^14.17.0"
+  },
+  "devDependencies": {
+    "@stripe/stripe-js": "^3.0.3"
+  }
+}
