@@ -2,15 +2,26 @@ import React, { useEffect, useState } from "react";
 import * as styles from "./styles.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 
+const PREFERS_DARK_MEDIA = "(prefers-color-scheme: dark)";
+
 const IndexPage = () => {
   const [isDark, setIsDark] = useState(false);
 
+  function changeEventListener(event) {
+    setIsDark(event.matches);
+  }
+
   useEffect(() => {
     window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (event) => {
-        setIsDark(event.matches);
-      });
+      .matchMedia(PREFERS_DARK_MEDIA)
+      .addEventListener("change", changeEventListener);
+
+    setIsDark(window.matchMedia(PREFERS_DARK_MEDIA).matches);
+
+    return () =>
+      window
+        .matchMedia(PREFERS_DARK_MEDIA)
+        .removeEventListener("change", changeEventListener);
   }, []);
 
   return (
