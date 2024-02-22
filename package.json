@@ -13,6 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "test:build": "gatsby clean && gatsby build && gatsby serve",
     "dev": "npm run clean && npm run develop"
   },
   "dependencies": {
